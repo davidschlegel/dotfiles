@@ -1,0 +1,12 @@
+.cache/*
+.bash*
+.gitconfig
+.yadm/*
+.histfile
+.viminfo
+.zcompdump
+Docs
+Mail
+Programs
+Downloads
+Documents
