@@ -1,41 +1,62 @@
-##### THIS FILE IS BEING CURRENTLY MANAGED BY URXVTCONFIG #####
-##### CHANGES DONE TO THIS FILE MANUALLY MAY AFFECT THE FUNCTIONALITY ######
-##### PROCEED WITH CAUTION! #####
+! PaperColor Theme
 
-! special colors
-*.foreground:  #2f2f2f
-*.background:  #ffffff
-*.cursorColor:  #606060
+URxvt.foreground: #4D4D4C
+
+URxvt.background: #EEEEEE
+
 ! black
-*.color0:      #000000
-*.color8:      #808080
+
+URxvt.color0: #EDEDED
+
+URxvt.color8: #969694
+
 ! red
-*.color1:      #ff0000
-*.color9:      #ff0000
+
+URxvt.color1: #D7005F
+
+URxvt.color9: #D7005F
+
 ! green
-*.color2:      #33ff00
-*.color10:     #33ff00
-! yellow
-*.color3:      #ff0099
-*.color11:     #ff0099
+
+URxvt.color2: #718C00
+
+URxvt.color10: #718C00
+
+! yellow / orange
+
+URxvt.color3: #D75F00
+
+URxvt.color11: #D75F00
+
 ! blue
-*.color4:      #0066ff
-*.color12:     #0066ff
+
+URxvt.color4: #4271AE
+
+URxvt.color12: #4271AE
+
 ! magenta
-*.color5:      #cc00ff
-*.color13:     #cc00ff
+
+URxvt.color5: #8959A8
+
+URxvt.color13: #8959A8
+
 ! cyan
-*.color6:      #00ffff
-*.color14:     #00ffff
+
+URxvt.color6: #3E999F
+
+URxvt.color14: #3E999F
+
 ! white
-*.color7:      #d0d0d0
-*.color15:     #ffffff
+
+URxvt.color7: #4D4D4C
+
+URxvt.color15: #F5F5F5
 
 URxvt*scrollBar:         false
 URxvt*scrollBar_right:   false
 
 URxvt*transparent:       true
-URxvt*shading:       17
+URxvt*shading:       195
 
 URxvt.font: xft:Iosevka:pixelsize=16
 URxvt.boldFont:
