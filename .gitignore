@@ -10,3 +10,10 @@ Mail
 Programs
 Downloads
 Documents
+configbackup/*
+.mozilla/*
+.config/pulse/*
+.Xauthority
+.esd_auth
+.local/*
+.config/htop/htoprc
