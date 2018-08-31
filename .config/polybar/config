@@ -9,14 +9,14 @@
 
 [colors]
 ;background = ${xrdb:color0:#222}
-background = #222
-background-alt = #444
+background = #eeeeee
+background-alt = #d8d8d8
 ;foreground = ${xrdb:color7:#222}
-foreground = #dfdfdf
-foreground-alt = #555
-primary = #ffb52a
-secondary = #e60053
-alert = #bd2c40
+foreground = #333333
+foreground-alt = #eeeeee
+primary = #719c00
+secondary = #969694
+alert = #d7005f
 
 [bar/example]
 ;monitor = ${env:MONITOR:HDMI-1}
@@ -55,7 +55,8 @@ modules-right = filesystem xbacklight volume xkeyboard memory cpu wlan  battery 
 tray-position = right
 tray-padding = 2
 ;tray-transparent = true
-;tray-background = #0063ff
+tray-background = #000000
+tray-maxsize = 18
 
 ;wm-restack = bspwm
 ;wm-restack = i3
