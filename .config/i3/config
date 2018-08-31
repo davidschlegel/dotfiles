@@ -21,6 +21,10 @@ exec --no-startup-id pasystray
 exec --no-startup-id redshift-gtk
 exec --no-startup-id caffeine
 
+#Use dunst as notification deamon
+exec --no-startup-id dunst 
+
+
 # i3 config file (v4)
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
@@ -39,8 +43,8 @@ font iosevka:monospace 10
 bindsym $mod+p exec $HOME/Programs/i3lock-fancy-multimonitor/lock
 
 #brightness keys
-bindsym XF86MonBrightnessDown exec xbacklight -dec 5
-bindsym XF86MonBrightnessUp exec xbacklight -inc 5
+bindsym XF86MonBrightnessDown exec xbacklight -dec 1
+bindsym XF86MonBrightnessUp exec xbacklight -inc 1
 
 #volume and mute keys
 set $sink 0 #`pactl list short sinks | grep RUNNING | cut -f1`
@@ -88,7 +92,7 @@ bindsym $mod+Shift+d exec --no-startup-id rofi -show ssh
 #exec_always --no-startup-id apython ~/programs/i3scripts/autoname_workspaces.py
 
 exec_always --no-startup-id  $HOME/Programs/i3scripts/autoname_workspaces.py &
-
+exec --no-startup-id flickpapr &
 
 # change focus
 bindsym $mod+j focus left
@@ -210,7 +214,7 @@ bindsym $mod+Shift+Tab workspace prev_on_output
 bindcode $mod+107 exec --no-startup-id "scrot"
 
 #-Shutdown Menu
-set $Locker /home/david/programs/i3lock-fancy-multimonitor/lock && sleep 1
+set $Locker $HOME/Programs/i3lock-fancy-multimonitor-master/lock && sleep 1
 set $mode_system (s)uspend (h)ybernate (r)estart shut(d)own
 mode  "$mode_system" {
         bindsym s exec --no-startup-id $Locker && systemctl suspend, mode "default"
