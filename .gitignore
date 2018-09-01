@@ -4,7 +4,7 @@
 .yadm/*
 .histfile
 .viminfo
-.zcompdump
+.zcompdump*
 Docs
 Mail
 Programs
@@ -17,3 +17,12 @@ configbackup/*
 .esd_auth
 .local/*
 .config/htop/htoprc
+.config/urxvtconfig/
+tmp
+.config/dconf
+.config/Thunar/accels.scm
+.config/xfce4
+.config/Trolltech.conf
+.thumbnails
+.ssh
+.config/libreoffice
