@@ -40,7 +40,7 @@ font iosevka:monospace 10
 #font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 
 #i3lock-fancy-multimonitor
-bindsym $mod+p exec $HOME/Programs/i3lock-fancy-multimonitor/lock
+bindsym $mod+p exec $HOME/Programs/i3lock-fancy-multimonitor-master/lock
 
 #brightness keys
 bindsym XF86MonBrightnessDown exec xbacklight -dec 1
