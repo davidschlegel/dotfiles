@@ -1,5 +1,4 @@
 # The following lines were added by compinstall
-
 zstyle ':completion:*' completer _expand _complete _ignored _correct _approximate
 zstyle ':completion:*' list-colors ''
 zstyle ':completion:*' menu select=long
@@ -17,4 +16,22 @@ setopt appendhistory autocd extendedglob
 bindkey -v
 # End of lines configured by zsh-newuser-install
 
+plugins=(
+git
+)
+
+export ZSH="/usr/share/oh-my-zsh"
+ZSH_THEME="agnoster"
+DEFAULT_USER=$USER
+promt_context() {}
+
+ZSH_CACHE_DIR=$HOME/.cache/oh-my-zsh
+if [[ ! -d $ZSH_CACHE_DIR ]]; then
+	mkdir $ZSH_CACHE_DIR
+fi
+
+source $ZSH/oh-my-zsh.sh
+
 path+=$HOME/Programs/yay
+
+
