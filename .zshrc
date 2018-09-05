@@ -35,3 +35,8 @@ source $ZSH/oh-my-zsh.sh
 path+=$HOME/Programs/yay
 
 
+alias turn_off_gpu="sudo /usr/share/acpi_call/examples/turn_off_gpu.sh"
+
+if [[ -r /usr/local/lib/python2.7/dist-packages/powerline/bindings/zsh/powerline.zsh ]]; then
+    source /usr/local/lib/python2.7/dist-packages/powerline/bindings/zsh/powerline.zsh
+fi
