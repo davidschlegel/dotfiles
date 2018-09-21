@@ -32,8 +32,6 @@ fi
 
 source $ZSH/oh-my-zsh.sh
 
-path+=$HOME/Programs/yay
-
 
 alias turn_off_gpu="sudo /usr/share/acpi_call/examples/turn_off_gpu.sh"
 
