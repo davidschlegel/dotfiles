@@ -152,6 +152,7 @@ set iskeyword+=:
 " Not sure what this exactly does
 au BufEnter *.tex set autowrite
 
+let g:Tex_BibtexFlavor = 'biber'
 let g:Tex_DefaultTargetFormat = 'pdf'
 let g:Tex_MultipleCompileFormats = 'pdf'
 let g:Tex_CompileRule_pdf = 'mkdir -p out && lualatex -output-directory=out -interaction=nonstopmode $* && mv out/$*.pdf .'
