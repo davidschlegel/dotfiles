@@ -18,8 +18,62 @@ primary = #719c00
 secondary = #969694
 alert = #d7005f
 
-[bar/example]
-;monitor = ${env:MONITOR:HDMI-1}
+[bar/eDP1]
+monitor = ${env:MONITOR:eDP1}
+width = 100%
+height = 27
+;offset-x = 1%
+;offset-y = 1%
+radius = 6.0
+fixed-center = false
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 3
+line-color = #f00
+
+border-size = 0
+border-color = #00000000
+
+padding-left = 0
+padding-right = 2
+
+module-margin-left = 1
+module-margin-right = 2
+
+
+font-0 = FontAwesome:pixelsize=14;0
+font-1 = iosevka:pixelsize=11;1
+#font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
+font-2 = siji:pixelsize=11;1
+
+modules-left = i3
+modules-center = date 
+modules-right = filesystem xbacklight volume xkeyboard memory cpu wlan  battery temperature powermenu
+
+tray-position = right
+tray-padding = 0
+;tray-transparent = true
+tray-background = #000000
+tray-maxsize = 18
+
+;wm-restack = bspwm
+;wm-restack = i3
+
+;override-redirect = true
+
+;scroll-up = bspwm-desknext
+;scroll-down = bspwm-deskprev
+
+;scroll-up = i3wm-wsnext
+;scroll-down = i3wm-wsprev
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+[bar/DP3]
+monitor = ${env:MONITOR:DP3}
 width = 100%
 height = 27
 ;offset-x = 1%
@@ -128,7 +182,7 @@ index-sort = true
 wrapping-scroll = false
 
 ; Only show workspaces on the same output as the bar
-;pin-workspaces = true
+pin-workspaces = true
 
 label-mode-padding = 2
 label-mode-foreground = #000
@@ -195,7 +249,7 @@ card = intel_backlight
 [module/cpu]
 type = internal/cpu
 interval = 2
-format-prefix = "cpu"
+format-prefix = ""
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #f90000
 label = %percentage:2%%
@@ -203,7 +257,7 @@ label = %percentage:2%%
 [module/memory]
 type = internal/memory
 interval = 2
-format-prefix = "mem"
+format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #4bffdc
 label = %percentage_used%%
@@ -215,7 +269,7 @@ interval = 3.0
 
 format-connected = <ramp-signal> <label-connected>
 format-connected-underline = #9f78e1
-label-connected = %essid%
+label-connected = "  %essid%"
 
 format-disconnected =
 ;format-disconnected = <label-disconnected>
@@ -236,9 +290,10 @@ interface = net0
 interval = 3.0
 
 format-connected-underline = #55aa55
-format-connected-prefix = " "
+format-connected-prefix = "  "
 format-connected-prefix-foreground = ${colors.foreground-alt}
-label-connected = %local_ip%
+label-connected =  %downspeed:9%  %upspeed:9%
+;label-connected = %local_ip%
 
 format-disconnected =
 ;format-disconnected = <label-disconnected>
@@ -266,10 +321,10 @@ label = %date% %time%
 type = internal/volume
 
 format-volume = <label-volume> <bar-volume>
-label-volume = VOL
+label-volume = "  "
 label-volume-foreground = ${root.foreground}
 
-format-muted-prefix = " "
+format-muted-prefix = "  │"
 format-muted-foreground = ${colors.foreground-alt}
 label-muted = sound muted
 
@@ -304,27 +359,31 @@ format-discharging = <ramp-capacity> <label-discharging>
 format-discharging-underline = ${self.format-charging-underline}
 
 label-discharging = %percentage%%  %consumption%W %time%
-label-charging = %percentage%% %time%
+label-charging = " %percentage%% %time%"
 
-format-full-prefix = " "
+format-full-prefix = " "
 format-full-prefix-foreground = ${colors.foreground-alt}
 format-full-underline = ${self.format-charging-underline}
 
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
-ramp-capacity-foreground = ${colors.foreground-alt}
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
 
-animation-charging-0 = 
-animation-charging-1 = 
-animation-charging-2 = 
-animation-charging-foreground = ${colors.foreground-alt}
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
 animation-charging-framerate = 750
+
 
 [module/temperature]
 type = internal/temperature
 thermal-zone = 0
 warn-temperature = 60
+format-prefix = "  "
 hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon2/temp1_input
 format = <ramp> <label>
 format-underline = #f50a4d
